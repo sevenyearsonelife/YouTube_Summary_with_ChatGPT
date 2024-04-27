@@ -53,3 +53,6 @@ webpack 是现代 JavaScript 应用程序的静态模块捆绑器。当 webpack 
 需要进入加载插件的页面【edge://extensions/】，点击【服务工作进程】，会跳转到一个新的控制台页面。  
 这个页面会显示打印的信息。
 注：如果想在background.js脚本中做一些测试性的打印，需要重新编译整个项目。执行npm run build或者sh upgrade.sh，重新加载插件即可。
+
+## index.js脚本在控制台打印了一些信息，如何查看？
+mac环境下，打开youtube视频，按下快捷键【option+command+I】，会在侧边栏打开一个控制台页面。 

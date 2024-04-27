@@ -1,7 +1,7 @@
 "use strict";
 
 console.log("connected...");
-console.log("all is well!");
+console.log("all is well! This is from background.js.");
 const onInstallURL = "https://glasp.co/youtube-summary";
 
 // On Chrome Install

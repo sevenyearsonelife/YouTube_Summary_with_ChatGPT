@@ -2,6 +2,8 @@
 
 import { insertSummaryBtn } from "./youtube";
 
+console.log("all is well! This is from index.js.");
+
 let oldHref = "";
 
 window.onload = async () => {
