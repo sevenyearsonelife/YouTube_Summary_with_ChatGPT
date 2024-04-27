@@ -24,7 +24,7 @@ export function getSummaryPrompt(transcript) {
 //const limit = 14000; // 1000 is a buffer
 
 // 扩充了整个提示词的规模
-const limit = 14000*20; // 1000 is a buffer
+const limit = 14000*1000; // 1000 is a buffer
 
 export function getChunckedTranscripts(textData, textDataOriginal) {
 
