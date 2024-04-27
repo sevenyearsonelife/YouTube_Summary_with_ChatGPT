@@ -1,6 +1,7 @@
 "use strict";
 
 console.log("connected...");
+console.log("all is well!");
 const onInstallURL = "https://glasp.co/youtube-summary";
 
 // On Chrome Install
