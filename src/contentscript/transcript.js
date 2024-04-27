@@ -58,6 +58,7 @@ export async function getTranscriptHTML(link, videoId) {
   const rawTranscript = await getRawTranscript(link);
 
   const scriptObjArr = [], timeUpperLimit = 60, charInitLimit = 300, charUpperLimit = 500;
+  // const scriptObjArr = [], timeUpperLimit = 60*1000, charInitLimit = 300*1000, charUpperLimit = 500*1000;
   let loop = 0, chars = [], charCount = 0, timeSum = 0, tempObj = {}, remaining = {};
 
   // Sum-up to either total 60 seconds or 300 chars.
