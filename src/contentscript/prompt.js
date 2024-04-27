@@ -1,9 +1,22 @@
+// export function getSummaryPrompt(transcript) {
+//   return `Title: "${document.title
+//     .replace(/\n+/g, " ")
+//     .trim()}"\nVideo Transcript: "${truncateTranscript(transcript)
+//     .replace(/\n+/g, " ")
+//     .trim()}"\nVideo Summary:`;
+// }
+
 export function getSummaryPrompt(transcript) {
   return `Title: "${document.title
     .replace(/\n+/g, " ")
-    .trim()}"\nVideo Transcript: "${truncateTranscript(transcript)
+    .trim()}"\n\nVideo Transcript: "${truncateTranscript(transcript)
     .replace(/\n+/g, " ")
-    .trim()}"\nVideo Summary:`;
+    .trim()}"\n\n------\n\nSummarize the above CONTENT into brief sentences of key points, then provide complete highlighted information in a list, choosing an appropriate emoji for each highlight.
+    Your output should use the following format: 
+    ### Summary
+    {brief summary of this content}
+    ### Highlights
+    - [Emoji] Bullet point with complete explanation`;
 }
 
 // Seems like 15,000 bytes is the limit for the prompt
