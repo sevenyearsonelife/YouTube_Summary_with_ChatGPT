@@ -23,7 +23,7 @@ export function getSummaryPrompt(transcript) {
 // Seems like 15,000 bytes is the limit for the prompt
 //const limit = 14000; // 1000 is a buffer
 
-// 扩充了提示词的规模
+// 扩充了提示词的长度
 const limit = 14000*1000; // 1000 is a buffer
 
 export function getChunckedTranscripts(textData, textDataOriginal) {
