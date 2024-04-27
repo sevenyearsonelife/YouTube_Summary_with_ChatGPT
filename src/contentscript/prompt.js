@@ -6,6 +6,7 @@
 //     .trim()}"\nVideo Summary:`;
 // }
 
+//优化了提示词
 export function getSummaryPrompt(transcript) {
   return `Title: "${document.title
     .replace(/\n+/g, " ")
