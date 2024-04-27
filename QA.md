@@ -38,3 +38,7 @@ The package.json and package-lock.json files serve complementary but distinct ro
 
 Conclusion:  
 The package.json file is indispensable for defining what a project needs in a flexible and manageable way, while the package-lock.json is crucial for ensuring that once these needs are met, they remain consistent wherever the project is installed. Both files are necessary for managing modern JavaScript projects effectively.
+
+注：   
+1.package.json 可以手动编辑，用于定义依赖关系和其他项目设置；package-lock.json 主要由工具自动生成，用于确保依赖的一致性。  
+2.没有 package-lock.json，在不同时间或不同环境中运行 npm install 可能会安装不同版本的包，可能导致未知的兼容性问题。
