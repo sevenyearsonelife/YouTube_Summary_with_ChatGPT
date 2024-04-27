@@ -13,11 +13,18 @@ export function getSummaryPrompt(transcript) {
     .trim()}"\n\nVideo Transcript: "${truncateTranscript(transcript)
     .replace(/\n+/g, " ")
     .trim()}"\n\n------\n\nSummarize the above CONTENT into brief sentences of key points, then provide complete highlighted information in a list, choosing an appropriate emoji for each highlight.
-    Your output should use the following format: 
+    Your output should use the following format:
     ### Summary
     {brief summary of this content}
     ### Highlights
-    - [Emoji] Bullet point with complete explanation`;
+    - [Emoji] Bullet point with complete explanation
+    
+    After summarizing the content, you need to ask 5 relevant questions based on the content and answer them strictly based on the content. Presented in the form of question and answer pairs:
+    ### Questions & Answers:
+    #### Q1
+    A1
+    #### Q2
+    A2`;
 }
 
 // Seems like 15,000 bytes is the limit for the prompt
