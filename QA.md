@@ -42,3 +42,9 @@ The package.json file is indispensable for defining what a project needs in a fl
 注：   
 1.package.json 可以手动编辑，用于定义依赖关系和其他项目设置；package-lock.json 主要由工具自动生成，用于确保依赖的一致性。  
 2.没有 package-lock.json，在不同时间或不同环境中运行 npm install 可能会安装不同版本的包，可能导致未知的兼容性问题。
+
+## 我下载了一个浏览器插件项目。进入项目目录后，执行 npm run clean && webpack 。这个命令有什么作用？
+clean 可能是 package.json 文件中指定的自定义脚本。尽管不是标准脚本，但在许多项目中， clean 脚本用于删除先前构建期间创建的文件或目录。这通常包括删除 dist （分发）目录或其他临时文件，以确保新的构建过程重新开始。执行的实际操作取决于 clean 脚本在 package.json 中的定义方式。  
+webpack 是现代 JavaScript 应用程序的静态模块捆绑器。当 webpack 处理应用程序时，它会在内部构建一个依赖关系图，该依赖关系图映射您的项目所需的每个模块并生成一个或多个捆绑包。运行不带任何附加参数的 webpack 将执行 webpack.config.js 文件中定义的默认配置或其他默认设置。它根据该配置中定义的规则和插件捆绑应用程序。 
+ 
+因此，当您在项目目录中执行 npm run clean && webpack 时，该过程将首先清除所有以前构建的文件（根据 package.json 中的 clean 脚本），确保以前构建的残留物不会干扰新的构建过程。清理完成并成功后，将调用 webpack 以根据当前代码库和配置设置重新捆绑项目。
