@@ -33,7 +33,10 @@ window.onload = async () => {
 
     }
 
-    if (window.location.hostname === "chat.openai.com") {
+    //if (window.location.hostname === "chat.openai.com") {
+    if (window.location.hostname === "chatgpt.com") {
+        //不显示打印
+        console.log("hello from chatgpt");
         if (document.getElementsByTagName("textarea")[0]) {
             document.getElementsByTagName("textarea")[0].focus();
             // If search query is "?ref=glasp"
@@ -44,6 +47,7 @@ window.onload = async () => {
                 chrome.runtime.sendMessage({ message: "getPrompt" }, (response) => {
                     // 期望从后台脚本接收提示文本并将其放置在文本区域中
                     document.getElementsByTagName("textarea")[0].value = response.prompt;
+                    document.getElementsByTagName("textarea")[0].value = "hello";
                     
                     // 这几行打印应该在哪里看呢？
                     console.log("from chatgpt");
