@@ -41,6 +41,7 @@ export async function getTranscript(langOption) {
   const rawTranscript = await getRawTranscript(langOption.link);
 
   // 查看从字幕link获取的内容
+  // 没有在控制台打印
   console.log("---rawTranscript");
   console.log(rawTranscript);
 
