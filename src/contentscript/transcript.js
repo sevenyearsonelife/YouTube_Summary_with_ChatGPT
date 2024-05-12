@@ -39,6 +39,11 @@ export async function getLangOptionsWithLink(videoId) {
 
 export async function getTranscript(langOption) {
   const rawTranscript = await getRawTranscript(langOption.link);
+
+  // 查看从字幕link获取的内容
+  console.log("---rawTranscript");
+  console.log(rawTranscript);
+
   const transcript = rawTranscript.map((item) => { return item.text; }).join(' ');
   return transcript;
 }
