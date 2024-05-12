@@ -23,6 +23,7 @@ window.onload = async () => {
                 }
             });
         });
+        // from gpt4: Start observing the target node for configured mutations
         observer.observe(bodyList, { childList: true, subtree: true });
 
     }
