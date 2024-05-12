@@ -37,7 +37,8 @@ window.onload = async () => {
         if (document.getElementsByTagName("textarea")[0]) {
             document.getElementsByTagName("textarea")[0].focus();
             // If search query is "?ref=glasp"
-            if (window.location.search === "?ref=glasp") {
+            //if (window.location.search === "?ref=glasp") {
+            if (window.location.search === "?ref=glasp&oai-dm=1") {
                 // get prompt from background.js
                 chrome.runtime.sendMessage({ message: "getPrompt" }, (response) => {
                     document.getElementsByTagName("textarea")[0].value = response.prompt;
