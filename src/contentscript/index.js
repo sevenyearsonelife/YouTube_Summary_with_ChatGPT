@@ -11,6 +11,7 @@ window.onload = async () => {
     if (window.location.hostname === "www.youtube.com") {
         
         if (window.location.search !== "" && window.location.search.includes("v=")) {
+            // 原来这个插件的按钮是这种方式导入的
             insertSummaryBtn();
         }
 
