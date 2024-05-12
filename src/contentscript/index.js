@@ -17,13 +17,17 @@ window.onload = async () => {
         const bodyList = document.querySelector("body");
         let observer = new MutationObserver((mutations) => {
             mutations.forEach((mutation) => {
+                // Example URL: Suppose the URL is https://www.example.com:8080/path/index.html?search=test#section1. 
+                // Here, document.location.href would be this entire string.
+                // from gpt4
                 if (oldHref !== document.location.href) {
                     oldHref = document.location.href;
                     insertSummaryBtn();
                 }
             });
         });
-        // from gpt4: Start observing the target node for configured mutations
+        // Start observing the target node for configured mutations
+        // from gpt4
         observer.observe(bodyList, { childList: true, subtree: true });
 
     }
