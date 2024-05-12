@@ -24,6 +24,11 @@ export async function getLangOptionsWithLink(videoId) {
 
   return Array.from(languageOptions).map((langName, index) => {
     const link = captionTracks.find(i => i.name.simpleText === langName).baseUrl;
+    
+    // 打印字幕文件的链接
+    console.log("transcript link");
+    console.log({language: langName, link: link});
+
     return {
       language: langName,
       link: link
