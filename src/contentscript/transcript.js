@@ -5,6 +5,10 @@ export async function getLangOptionsWithLink(videoId) {
   // Get a transcript URL
   const videoPageResponse = await fetch("https://www.youtube.com/watch?v=" + videoId);
   const videoPageHtml = await videoPageResponse.text();
+  // 点开查看字幕的按钮，打印信息会在控制台显示
+  console.log("videoPageHtml");
+  console.log(videoPageHtml);
+
   const splittedHtml = videoPageHtml.split('"captions":')
 
   if (splittedHtml.length < 2) { return; } // No Caption Available
