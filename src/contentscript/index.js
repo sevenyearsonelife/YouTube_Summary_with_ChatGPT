@@ -52,6 +52,7 @@ window.onload = async () => {
                     if (response.prompt !== "") {
                         console.log("response.prompt不为空");
                         document.getElementsByTagName("textarea")[0].focus();
+                        // 以编程的方式点击页面上的按钮
                         document.getElementsByTagName("button")[document.getElementsByTagName("button").length-1].click();
                     }
                 });
