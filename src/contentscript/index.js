@@ -42,8 +42,15 @@ window.onload = async () => {
             if (window.location.search.includes("ref=glasp")) {
                 // get prompt from background.js
                 chrome.runtime.sendMessage({ message: "getPrompt" }, (response) => {
+                    // 期望从后台脚本接收提示文本并将其放置在文本区域中
                     document.getElementsByTagName("textarea")[0].value = response.prompt;
+                    
+                    // 这几行打印应该在哪里看呢？
+                    console.log("from chatgpt");
+                    console.log(response.prompt);
+
                     if (response.prompt !== "") {
+                        console.log("response.prompt不为空");
                         document.getElementsByTagName("textarea")[0].focus();
                         document.getElementsByTagName("button")[document.getElementsByTagName("button").length-1].click();
                     }
