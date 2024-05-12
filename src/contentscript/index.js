@@ -37,6 +37,7 @@ window.onload = async () => {
         if (document.getElementsByTagName("textarea")[0]) {
             document.getElementsByTagName("textarea")[0].focus();
             // If search query is "?ref=glasp"
+            // 意味着当前的chatgpt页面时从glasp插件页面跳转过来的
             //if (window.location.search === "?ref=glasp") {
             if (window.location.search.includes("ref=glasp")) {
                 // get prompt from background.js
