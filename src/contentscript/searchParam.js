@@ -17,3 +17,17 @@ export function getSearchParam(str) {
     return urlParams;
     
 }
+
+
+// 假设url是：http://example.com/?name=John+Doe&age=30
+// 处理结果为：
+// {
+//     name: "John Doe",
+//     age: "30"
+// }
+
+// console.log(getSearchParam("?city=New+York&country=USA"));
+// {
+//     city: "New York",
+//     country: "USA"
+// }
