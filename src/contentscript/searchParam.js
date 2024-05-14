@@ -18,6 +18,12 @@ export function getSearchParam(str) {
     
 }
 
+// 如何提高编程效率？
+// 编程世界中有大量的不同级别的封装
+// 对于这个函数，你不需要了解其实现细节
+// 只需要知道输入和输出是什么
+// 大模型很擅长这个
+// 要擅于使用大模型
 
 // 假设url是：http://example.com/?name=John+Doe&age=30
 // 处理结果为：
