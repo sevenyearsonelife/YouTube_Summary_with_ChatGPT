@@ -17,10 +17,8 @@ export function getSummaryPrompt(transcript) {
     ### Summary
     {brief summary of this content}
     ### Highlights
-    - [Emoji] Bullet point with complete explanation
-    
-    After summarizing the content, you need to ask 5 relevant questions based on the content and answer them strictly based on the content. Presented in the form of question and answer pairs:
-    ### Questions & Answers:
+    - [Emoji] Bullet point with complete explanation\n\n------\n\nAfter summarizing the CONTENT, you need to ask 5 relevant questions based on the CONTENT and answer them strictly based on the CONTENT. Presented in the form of question and answer pairs:
+    ### Questions & Answers
     #### Q1
     A1
     #### Q2

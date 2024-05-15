@@ -37,19 +37,23 @@ export async function getLangOptionsWithLink(videoId) {
 
 }
 
-export async function getTranscript(langOption) {
-  const rawTranscript = await getRawTranscript(langOption.link);
+// 这个函数没有被使用过，注释掉
+// export async function getTranscript(langOption) {
 
-  // 查看从字幕link获取的内容
-  // 没有在控制台打印
-  console.log("---rawTranscript");
-  console.log(rawTranscript);
+//   const rawTranscript = await getRawTranscript(langOption.link);
 
-  const transcript = rawTranscript.map((item) => { return item.text; }).join(' ');
-  return transcript;
-}
+//   // 查看从字幕link获取的内容
+//   // 没有在控制台打印
+//   console.log("---rawTranscript");
+//   console.log(rawTranscript);
 
-export async function getRawTranscript(link) {
+//   const transcript = rawTranscript.map((item) => { return item.text; }).join(' ');
+//   return transcript;
+// }
+
+// 这个函数只在当前文件使用，可以删除export关键字
+// export async function getRawTranscript(link) {
+async function getRawTranscript(link) {
 
   // Get Transcript
   const transcriptPageResponse = await fetch(link); // default 0
