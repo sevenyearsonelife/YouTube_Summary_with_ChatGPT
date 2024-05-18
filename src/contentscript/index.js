@@ -2,6 +2,8 @@
 
 import { insertSummaryBtn } from "./youtube";
 
+// 如何查看控制台的打印信息？
+// 在插件加载页面，点击【服务工作进程】
 console.log("all is well! This is from index.js.");
 
 let oldHref = "";
