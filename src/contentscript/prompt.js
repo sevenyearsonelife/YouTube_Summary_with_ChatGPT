@@ -19,10 +19,10 @@ export function getSummaryPrompt(transcript) {
     ### Highlights
     - [Emoji] Bullet point with complete explanation\n\n------\n\nAfter summarizing the CONTENT, you need to ask 5 relevant questions based on the CONTENT and answer them strictly based on the CONTENT. Presented in the form of question and answer pairs:
     ### Questions & Answers
-    #### Q1
-    A1
-    #### Q2
-    A2`;
+    #### Q1: question1
+    A1: answer1
+    #### Q2: question2
+    A2: answer2`;
 }
 
 // Seems like 15,000 bytes is the limit for the prompt
